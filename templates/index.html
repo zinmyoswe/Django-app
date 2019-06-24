@@ -1,4 +1,5 @@
 {% load static %}
+{% static "image" as baseUrl %}
 <!DOCTYPE html>
 <html >
 <head>
@@ -336,6 +337,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </section>
 
+<section>
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+        {% for dest in dests %}
+        <div class="col-lg-4">
+            <p><img src="{{baseUrl}}/{{dest.image}}" width="330" height="270"></p>
+            <p>{{dest.name}}</p>
+            <p>{{dest.desc}}</p>
+            <p>${{dest.price}}</p>
+
+        </div>
+                {% endfor %}
+        </div>
+            </div>
+    </div>
+</div>
+</section>
+
 <section class="mbr-gallery mbr-slider-carousel cid-qIjFtNvZSJ" id="gallery1-6" data-sortbtn="btn-primary">
 
 
@@ -351,6 +373,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-left-gallery"><!-- Filter --><!-- Gallery --><div class="mbr-gallery-row"><div class="mbr-gallery-layout-default"><div><div><div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome"><div href="#lb-gallery1-6" data-slide-to="0" data-toggle="modal">
 
         	<img src="https://mobirise.com/html-templates/shop/assets/images/gallery00.jpg" alt=""><span class="icon-focus"></span><span class="mbr-gallery-title mbr-fonts-style display-7">Wireless</span></div></div>
+            <br>
+
+
         	<div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Responsive"><div href="#lb-gallery1-6" data-slide-to="1" data-toggle="modal">
 
         		<img src="https://mobirise.com/html-templates/shop/assets/images/malte-wingen-381988-1920x1280-800x533.jpg" alt=""><span class="icon-focus"></span><span class="mbr-gallery-title mbr-fonts-style display-7">Touch Control</span></div></div><div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Creative"><div href="#lb-gallery1-6" data-slide-to="2" data-toggle="modal">
