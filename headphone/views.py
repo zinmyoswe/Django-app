@@ -10,18 +10,21 @@ def index(request):
     dest1.desc = 'The City that Never Sleeps'
     dest1.price = 700
     dest1.image = 'yangon.jpg'
+    dest1.offer = True
 
     dest2 = Destination()
     dest2.name = 'Mandalay'
     dest2.desc = 'The City that Never Sleeps'
     dest2.price = 600
     dest2.image = 'yangon2.jpg'
+    dest2.offer = False
 
     dest3 = Destination()
     dest3.name = 'Mawlamying'
     dest3.desc = 'The City that Never Sleeps'
     dest3.price = 300
-    dest3.image = 'yangon.jpg'
+    dest3.image = 'bagan.jpg'
+    dest3.offer = True
 
     dests = [dest1, dest2, dest3 ]
 

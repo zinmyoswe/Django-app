@@ -346,6 +346,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {% for dest in dests %}
         <div class="col-lg-4">
             <p><img src="{{baseUrl}}/{{dest.image}}" width="330" height="270"></p>
+            {% if dest.offer%}
+            <span class="badge badge-warning">Special Offer</span>
+            {% else %}
+            <br>
+            {% endif %}
             <p>{{dest.name}}</p>
             <p>{{dest.desc}}</p>
             <p>${{dest.price}}</p>
